@@ -1,1 +1,9 @@
 @import 'tailwindcss';
+
+.home_background_image {
+  background: url('/background.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
