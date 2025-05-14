@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Background from '@/components/background/Background'
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -14,7 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased h-screen w-screen home_background_image`}>{children}</body>
+      <body className="min-h-screen min-w-screen flex flex-col relative overflow-x-hidden">
+        <Background />
+        {children}
+      </body>
     </html>
   )
 }
