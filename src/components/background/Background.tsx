@@ -1,6 +1,6 @@
 import './styles.css'
 
-const VerticalLine = () => <div className="h-full w-[1px] bg-gray-200 opacity-50" />
+const VerticalLine = () => <div className="h-full w-[1px] bg-purple-300 opacity-50" />
 
 const Background = () => {
   return (
@@ -16,11 +16,11 @@ const Background = () => {
         ))}
       </div>
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="h-[480px] w-[480px] border border-gray-200 rounded-full flex flex-col justify-between items-center">
+        <div className="h-[480px] w-[480px] border border-purple-300 rounded-full flex flex-col justify-between items-center">
           {[...Array(2)].map((_, i) => (
             <div
               key={i}
-              className={`not-lg:w-full w-96 border-b border-gray-200 ${
+              className={`not-lg:w-full w-96 border-b border-purple-300 ${
                 i === 0 ? 'mt-12' : 'mb-12'
               }`}
             />
