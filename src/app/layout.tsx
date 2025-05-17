@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import Background from '@/components/background/Background'
+import Navbar from '@/components/navbar/Navbar'
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -15,8 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen min-w-screen flex flex-col relative overflow-x-hidden">
+      <body className="min-h-screen min-w-screen flex flex-col items-center relative overflow-x-hidden">
         <Background />
+        <Navbar />
         {children}
       </body>
     </html>
