@@ -2,12 +2,9 @@
 import React from 'react'
 import { MOBILE_NAV_ITEMS } from './nav-items'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import dynamic from 'next/dynamic'
 
-const MobileNav = () => {
-  const pathname = usePathname()
-
+const MobileNav = ({ pathname = '/' }) => {
   return (
     <div className="w-full flex gap-2 px-1 justify-evenly items-center">
       {MOBILE_NAV_ITEMS.map(({ href, label, icon }) => {

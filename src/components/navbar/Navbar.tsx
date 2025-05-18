@@ -7,9 +7,11 @@ import { useState } from 'react'
 import dynamic from 'next/dynamic'
 import MobileNav from './mobile-nav'
 import { NAV_ITEMS } from './nav-items'
+import { usePathname } from 'next/navigation'
 
 const Navbar = () => {
   const [isHover, setIsHover] = useState(false)
+  const pathname = usePathname()
   return (
     <>
       <nav
@@ -23,14 +25,19 @@ const Navbar = () => {
           </Link>
 
           <div className="flex items-center gap-8 ">
-            {NAV_ITEMS.map(({ href, label }) => (
-              <Link
-                key={label}
-                href={href}
-                className={`icon-wrapper flex justify-center items-center gap-2 hover:text-purple-400 hover:underline underline-offset-2 `}>
-                {label}
-              </Link>
-            ))}
+            {NAV_ITEMS.map(({ href, label }) => {
+              const isActive = pathname === href
+              return (
+                <Link
+                  key={label}
+                  href={href}
+                  className={`icon-wrapper flex justify-center items-center gap-2
+                   hover:text-purple-400 hover:underline underline-offset-2
+                  ${isActive ? 'text-purple-400 underline' : 'text-gray-200'}`}>
+                  {label}
+                </Link>
+              )
+            })}
           </div>
 
           <button
@@ -46,7 +53,7 @@ const Navbar = () => {
       <div
         className={`sm:hidden fixed bottom-2 px-8 py-1 w-[90%] h-14 z-20 bg-white/50 rounded-2xl p-2
         flex items-center justify-center gap-2 backdrop-blur-sm text-gray-200 text-lg ${jura_font.className}`}>
-        <MobileNav />
+        <MobileNav pathname={pathname} />
       </div>
     </>
   )
