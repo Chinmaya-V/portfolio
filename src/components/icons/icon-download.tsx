@@ -1,6 +1,6 @@
 import React from 'react'
 
-const IconDownload = ({ fill = '#d1d5dc', size = '24px' }) => {
+const IconDownload = ({ fill = '#d1d5dc', size = '32px' }) => {
   return (
     <svg
       version="1.1"

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import IconDownload from '../icons/icon-download'
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
-import IconMenu from '../icons/icon-menu'
+import MobileNav from './mobile-nav'
 
 const NAV_ITEMS = [
   { href: '/about', label: 'About' },
@@ -45,24 +45,16 @@ const Navbar = () => {
           bg-purple-400 px-4 py-1 rounded hover:text-purple-900`}
             onMouseEnter={() => setIsHover(true)}
             onMouseLeave={() => setIsHover(false)}>
-            {isHover ? <IconDownload fill="#59168b" /> : <IconDownload />}
+            {isHover ? <IconDownload fill="#59168b" size="24px" /> : <IconDownload size="24px" />}
             Resume
           </button>
         </div>
       </nav>
-      <nav
-        className={`sm:hidden absolute top-0 px-8 py-1 w-full h-10 z-20 bg-gradient-to-t from-zinc-100/20 to-transparent
-        flex items-center justify-between backdrop-blur-sm text-gray-200 text-lg ${jura_font.className}`}>
-        <Link
-          href="/"
-          className="flex items-center w-fit rounded bg-purple-300 transition-colors duration-300">
-          <Image src="/logo.svg" alt="logo" width={32} height={32} priority />
-        </Link>
-
-        <button>
-          <IconMenu fill="#c084fc" />
-        </button>
-      </nav>
+      <div
+        className={`sm:hidden fixed bottom-2 px-8 py-1 w-[90%] h-12 z-20 bg-zinc-100/20 rounded-2xl p-2
+        flex items-center justify-center gap-2 backdrop-blur-sm text-gray-200 text-lg ${jura_font.className}`}>
+        <MobileNav />
+      </div>
     </>
   )
 }
