@@ -6,14 +6,7 @@ import IconDownload from '../icons/icon-download'
 import { useState } from 'react'
 import dynamic from 'next/dynamic'
 import MobileNav from './mobile-nav'
-
-const NAV_ITEMS = [
-  { href: '/about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact', label: 'Contact' },
-  { href: '#achievements', label: 'Achievements' },
-]
+import { NAV_ITEMS } from './nav-items'
 
 const Navbar = () => {
   const [isHover, setIsHover] = useState(false)
@@ -51,7 +44,7 @@ const Navbar = () => {
         </div>
       </nav>
       <div
-        className={`sm:hidden fixed bottom-2 px-8 py-1 w-[90%] h-12 z-20 bg-zinc-100/20 rounded-2xl p-2
+        className={`sm:hidden fixed bottom-2 px-8 py-1 w-[90%] h-14 z-20 bg-white/50 rounded-2xl p-2
         flex items-center justify-center gap-2 backdrop-blur-sm text-gray-200 text-lg ${jura_font.className}`}>
         <MobileNav />
       </div>
