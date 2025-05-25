@@ -1,7 +1,8 @@
 .home_background_image {
-  background: url('/background.jpg');
+  background: url("/background.png");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-clip: content-box;
 }

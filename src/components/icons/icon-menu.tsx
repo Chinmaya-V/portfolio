@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-const IconMenu = ({ fill = '#d1d5dc', size = '24px' }) => {
+const IconMenu = ({ fill = "#d1d5dc", size = "24px" }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,7 +8,8 @@ const IconMenu = ({ fill = '#d1d5dc', size = '24px' }) => {
       y="0px"
       width={size}
       height={size}
-      viewBox="0,0,256,256">
+      viewBox="0,0,256,256"
+    >
       <g
         fill="none"
         fillRule="nonzero"
@@ -23,7 +24,8 @@ const IconMenu = ({ fill = '#d1d5dc', size = '24px' }) => {
         fontWeight="none"
         fontSize="none"
         textAnchor="none"
-        style={{ mixBlendMode: 'normal' }}>
+        style={{ mixBlendMode: "normal" }}
+      >
         <g transform="scale(5.33333,5.33333)">
           <path d="M36.1,7.5h2.4c1.1,0 2,0.9 2,2v3c0,1.1 -0.9,2 -2,2h-20.5"></path>
           <path d="M13,14.5h-3.5c-1.1,0 -2,-0.9 -2,-2v-3c0,-1.1 0.9,-2 2,-2h21.3"></path>
@@ -34,7 +36,7 @@ const IconMenu = ({ fill = '#d1d5dc', size = '24px' }) => {
         </g>
       </g>
     </svg>
-  )
-}
+  );
+};
 
-export default IconMenu
+export default IconMenu;
