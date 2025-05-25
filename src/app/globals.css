@@ -1,12 +1,12 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 body {
-  cursor: url('/cursors/cursor.svg'), auto;
+  cursor: url("/cursors/cursor.svg"), auto;
 }
 
 button,
 a {
-  cursor: url('/cursors/hand-cursor.svg'), pointer;
+  cursor: url("/cursors/hand-cursor.svg"), pointer;
 }
 
 input,
