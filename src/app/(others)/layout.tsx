@@ -1,16 +1,16 @@
-import type { Metadata } from "next";
-import "../globals.css";
-import Navbar from "@/components/navbar/navbar";
-import Background from "@/components/background/background";
+import type { Metadata } from 'next'
+import '../globals.css'
+import Navbar from '@/components/navbar/navbar'
+import Background from '@/components/background/background'
 
 export const metadata: Metadata = {
-  title: "Chinmaya V | Portfolio",
+  title: 'Chinmaya V | Portfolio',
   description:
-    "Frontend Web Developer with 4+ years of experience, specializing in React.js, Next.js, TypeScript, Context API, Redux, Zustand, Styled-components, Node.js, NestJS, and MSAL.",
-};
+    'Frontend Web Developer with 4+ years of experience, specializing in React.js, Next.js, TypeScript, Context API, Redux, Zustand, Styled-components, Node.js, NestJS, and MSAL.',
+}
 
 interface RootLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -22,5 +22,5 @@ export default function RootLayout({ children }: RootLayoutProps) {
         {children}
       </body>
     </html>
-  );
+  )
 }

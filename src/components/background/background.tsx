@@ -1,4 +1,4 @@
-import "./styles.css";
+import './styles.css'
 
 const Background = () => {
   return (
@@ -7,14 +7,13 @@ const Background = () => {
       <div
         className="absolute top-0 left-0 w-full h-full"
         style={{
-          background:
-            "radial-gradient(circle at 50% 100%, #16273b 20%, #000 100%)",
+          background: 'radial-gradient(circle at 50% 50%, #1e1b4b 20%, #000 100%)',
           zIndex: -10,
         }}
       />
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50" />
     </div>
-  );
-};
+  )
+}
 
-export default Background;
+export default Background
