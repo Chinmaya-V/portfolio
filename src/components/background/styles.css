@@ -1,8 +1,8 @@
 .home_background_image {
-  background: url('/background.png');
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-clip: border-box;
+	background: url('/background.png');
+	background-attachment: fixed;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-clip: border-box;
 }

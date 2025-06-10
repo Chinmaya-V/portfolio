@@ -6,10 +6,10 @@ import IconContact from '../icons/icon-contact'
 import IconTrophy from '../icons/icon-trophy'
 
 export const NAV_ITEMS = [
-  { href: '/#home', label: 'Home', icon: IconHome },
-  { href: '/about', label: 'About', icon: IconAbout },
-  { href: '/#skills', label: 'Skills', icon: IconSkills },
-  { href: '/#projects', label: 'Projects', icon: IconProjects },
-  { href: '/#contact', label: 'Contact', icon: IconContact },
-  { href: '/feats', label: 'Feats', icon: IconTrophy },
+	{ href: '/#home', label: 'Home', icon: IconHome },
+	{ href: '/about', label: 'About', icon: IconAbout },
+	{ href: '/#skills', label: 'Skills', icon: IconSkills },
+	{ href: '/#projects', label: 'Projects', icon: IconProjects },
+	{ href: '/#contact', label: 'Contact', icon: IconContact },
+	{ href: '/feats', label: 'Feats', icon: IconTrophy },
 ]

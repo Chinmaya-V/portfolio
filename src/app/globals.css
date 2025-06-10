@@ -1,19 +1,19 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  cursor: url("/cursors/cursor.svg"), auto;
+	cursor: url('/cursors/cursor.svg'), auto;
 }
 
 button,
 a {
-  cursor: url("/cursors/hand-cursor.svg"), pointer;
+	cursor: url('/cursors/hand-cursor.svg'), pointer;
 }
 
 input,
 textarea {
-  cursor: text;
+	cursor: text;
 }
