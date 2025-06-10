@@ -1,16 +1,46 @@
 'use client'
 import { jura_font } from '@/utils/fonts'
-import Link from 'next/link'
 import IconDownload from '../icons/icon-download'
-import { useState } from 'react'
+import { MouseEvent, useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 import MobileNav from './mobile-nav'
 import { NAV_ITEMS } from './nav-items'
-import { usePathname } from 'next/navigation'
+import { useRouter } from 'next/navigation'
+import { useNavbarStore } from '@/stores/navbar/navbarStore'
+
+const NavLinks = ({ href, label }: { href: string; label: string }) => {
+  const { link, setLink } = useNavbarStore()
+  const router = useRouter()
+
+  const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault()
+    if (href === link) return
+    setLink(href)
+    router.replace(href)
+  }
+
+  useEffect(() => {
+    const path = window.location.pathname + window.location.hash
+    if (path === href) {
+      setLink(href)
+    }
+  }, [href, setLink])
+
+  return (
+    <button
+      id={label}
+      onClick={handleClick}
+      className={`icon-wrapper flex justify-center items-center gap-2
+                   hover:text-purple-400 hover:underline underline-offset-2
+                  ${href === link ? 'text-purple-400 underline' : 'text-gray-200'}`}>
+      {label}
+    </button>
+  )
+}
 
 const Navbar = () => {
   const [isHover, setIsHover] = useState(false)
-  const pathname = usePathname()
+
   return (
     <>
       <nav
@@ -19,17 +49,7 @@ const Navbar = () => {
         <div className="flex items-center justify-end-safe gap-4 w-full max-w-5xl">
           <div className="flex items-center gap-4 ">
             {NAV_ITEMS.map(({ href, label }) => {
-              const isActive = pathname === href
-              return (
-                <Link
-                  key={label}
-                  href={href}
-                  className={`icon-wrapper flex justify-center items-center gap-2
-                   hover:text-purple-400 hover:underline underline-offset-2
-                  ${isActive ? 'text-purple-400 underline' : 'text-gray-200'}`}>
-                  {label}
-                </Link>
-              )
+              return <NavLinks key={label} href={href} label={label} />
             })}
           </div>
 
@@ -46,7 +66,7 @@ const Navbar = () => {
       <div
         className={`sm:hidden fixed bottom-2 px-8 py-1 w-[90%] h-14 z-20 bg-white/50 rounded-2xl p-2
         flex items-center justify-center gap-2 backdrop-blur-sm text-gray-200 text-lg ${jura_font.className}`}>
-        <MobileNav pathname={pathname} />
+        <MobileNav />
       </div>
     </>
   )
