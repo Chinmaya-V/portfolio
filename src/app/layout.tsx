@@ -27,15 +27,15 @@ export default function RootLayout({ children, contact, projects, skills }: Root
 				/>
 			</head>
 			<body className="min-h-screen min-w-screen flex flex-col items-center relative overflow-x-hidden">
-				<Background key="background" />
-				<Navbar key="navbar" />
+				<Background />
+				<Navbar />
 				{children}
 				{isHomePage && (
-					<React.Fragment>
-						<React.Fragment key="skills">{skills}</React.Fragment>
-						<React.Fragment key="projects">{projects}</React.Fragment>
-						<React.Fragment key="contact">{contact}</React.Fragment>
-					</React.Fragment>
+					<>
+						{skills}
+						{projects}
+						{contact}
+					</>
 				)}
 			</body>
 		</html>
