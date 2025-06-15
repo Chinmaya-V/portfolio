@@ -3,7 +3,7 @@ import IconStar from '../icons/icon-star'
 
 const StyledLines = () => {
 	return (
-		<div className="w-3/5 max-sm:w-full flex items-center gap-1">
+		<div className="w-full flex items-center gap-1">
 			<IconStar size="48px" secondaryFill="#7e22ce" />
 			<div className="h-0 flex-1 border border-purple-500" />
 			<div className="size-4 border rounded-full bg-purple-400  border-purple-500" />

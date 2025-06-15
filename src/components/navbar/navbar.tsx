@@ -50,8 +50,8 @@ const Navbar = () => {
 			>
 				<div className="flex items-center justify-end-safe gap-4 w-full max-w-5xl">
 					<div className="flex items-center gap-4 ">
-						{NAV_ITEMS.map(({ href, label }) => {
-							return <NavLinks key={label} href={href} label={label} />
+						{NAV_ITEMS.map(({ href, label }, index) => {
+							return <NavLinks key={`key_${label}-${index}`} href={href} label={label} />
 						})}
 					</div>
 

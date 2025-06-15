@@ -6,6 +6,6 @@ interface NavbarStore {
 }
 
 export const useNavbarStore = create<NavbarStore>((set) => ({
-	link: '/#home',
+	link: '/',
 	setLink: (link: string) => set({ link }),
 }))

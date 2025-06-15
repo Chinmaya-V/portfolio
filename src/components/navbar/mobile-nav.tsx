@@ -48,8 +48,8 @@ const NavLinks = ({
 const MobileNav = () => {
 	return (
 		<div className="w-full flex gap-2 px-1 justify-evenly items-center">
-			{NAV_ITEMS.map(({ href, label, icon }) => {
-				return <NavLinks key={label} href={href} label={label} icon={icon} />
+			{NAV_ITEMS.map(({ href, label, icon }, index) => {
+				return <NavLinks key={`key_${label}-${index}`} href={href} label={label} icon={icon} />
 			})}
 		</div>
 	)
