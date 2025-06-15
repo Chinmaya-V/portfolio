@@ -8,12 +8,12 @@ const HeroImage = () => {
 	return (
 		<motion.div
 			animate={{
-				y: [-100, -60, 0],
-				x: [0, -40, 40],
-				scale: [0.8, 1],
+				y: [50, -60, 0],
+				x: [0, 40, -40],
+				scale: [0.9, 1, 1.1],
 				transition: { duration: 10, repeat: Infinity, repeatType: 'reverse' },
 			}}
-			className="w-full h-full max-sm:hidden blob_pattern"
+			className="w-full h-full blob_pattern"
 		>
 			<Image src="/astronaut.png" alt="Hero Image" width={450} height={450} />
 		</motion.div>
