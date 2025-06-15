@@ -6,3 +6,12 @@
 	background-size: cover;
 	background-clip: border-box;
 }
+
+.blob_pattern {
+	width: 70%;
+	height: 70%;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: repeat;
+	background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox=%220 0 1000 1000%22 xmlns=%22http:%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CclipPath id=%22a%22%3E%3Cpath fill=%22currentColor%22 d=%22M818.5 595Q762 690 686 764.5t-200.5 119Q361 928 273 828.5t-155-214Q51 500 93.5 368T265 204q129-32 235.5-33t234 32.5q127.5 33.5 134 165t-50 226.5Z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg clip-path=%22url(%23a)%22%3E%3Cpath fill=%22%23b874ed%22 d=%22M818.5 595Q762 690 686 764.5t-200.5 119Q361 928 273 828.5t-155-214Q51 500 93.5 368T265 204q129-32 235.5-33t234 32.5q127.5 33.5 134 165t-50 226.5Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+}
